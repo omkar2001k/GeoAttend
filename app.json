@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "GeoAttend",
+    "slug": "GeoAttend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.geoattend.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "GeoAttend uses your location to verify your presence at the office for attendance check-in.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "GeoAttend uses your location to verify geofence entry and automated office attendance."
+      }
+    },
+    "android": {
+      "package": "com.geoattend.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow GeoAttend to use your location for attendance check-in."
+        }
+      ]
+    ]
+  }
+}
